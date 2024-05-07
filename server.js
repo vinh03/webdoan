@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(bodyParser.raw({ type: 'application/json' }));
 app.use(cors({
-    origin: process.env.CLIENT_URL,
+    origin: "*",
     methods: ['GET', 'POST', "PUT", 'PATCH', 'DELETE'], // Chỉ cho phép các phương thức này
     credentials: true 
 }))
