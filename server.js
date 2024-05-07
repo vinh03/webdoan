@@ -11,7 +11,10 @@ app.use(express.json());
 app.use(cookieParser())
 app.use(bodyParser.raw({ type: 'application/json' }));
 app.use(cors({
-    origin: process.env.CLIENT_URL
+    origin: process.env.CLIENT_URL,
+    methods: ['GET', 'POST', "PUT", 'PATCH', 'DELETE'], // Chỉ cho phép các phương thức này
+    allowedHeaders: ['Content-Type', 'Authorization'], // Chỉ cho phép các header này
+    credentials: true 
 }))
 app.use(fileUpload({
     useTempFiles: true,
