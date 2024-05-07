@@ -1,7 +1,7 @@
 const { response } = require("express");
 const Users = require("../models/userModel");
 const Payments = require("../models/paymentModal");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const userCtrl = {
   //Kiểm tra điều kiện
